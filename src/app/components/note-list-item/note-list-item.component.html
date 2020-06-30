@@ -1,0 +1,6 @@
+<mat-card [style.background-color]="setBg()">
+    <mat-card-title>{{note.title}} <a href="https://web.whatsapp.com/send?text=*{{note.title}}* : {{note.content}}" 
+      data-action="#" target="_blank" ><span class="material-icons float-right">share</span></a></mat-card-title>
+    <mat-card-content>{{note.content}}</mat-card-content>
+    <div class="mat-card-category">#{{note.category}}</div>
+</mat-card>

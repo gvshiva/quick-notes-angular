@@ -1,0 +1,12 @@
+mat-toolbar {
+  background-color: var(--primary-color);
+  color: var(--text-light-color);
+}
+
+mat-icon {
+  padding: 0 30px;
+}
+
+.toolbar-spacer {
+  flex : 1 1 auto;
+}

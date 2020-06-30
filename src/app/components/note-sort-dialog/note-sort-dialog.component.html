@@ -1,0 +1,19 @@
+<h1 mat-dialog-title>Sort Note</h1>
+<form [formGroup]="noteForm">
+    <div mat-dialog-content>
+        <mat-form-field>
+
+            <mat-label>Sort by Category</mat-label>
+            <mat-select matInput placeholder="Category" id="category" name="category" formControlName="category">
+                <mat-option *ngFor="let note of notes" [value]="note.value">
+                    {{note.viewValue}}
+                </mat-option>
+            </mat-select>
+
+        </mat-form-field>
+
+    </div>
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="noteForm.value" >Save</button>
+    </mat-dialog-actions>
+</form>

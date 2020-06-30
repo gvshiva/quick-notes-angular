@@ -1,0 +1,22 @@
+<h1 mat-dialog-title> Note login</h1>
+<form [formGroup]="noteForm">
+    <div mat-dialog-content>
+
+        <mat-form-field>
+            <textarea matInput placeholder="Enter Secret Key" id="secret" name="secret"
+                      matTextareaAutosize matAutosizeMinRows=1 matAutosizeMaxRows=1
+                      formControlName="secret" cdkFocusInitial>
+            </textarea>
+          </mat-form-field>
+          <mat-error *ngIf="noteForm.controls['secret'].hasError('required')">
+            Secret Key is required.
+          </mat-error>
+          <mat-error *ngIf="noteForm.controls['secret'].hasError('maxlength')">
+            Secret Key must be less than 100 characters.
+          </mat-error>
+
+    </div>
+    <mat-dialog-actions align="end">
+        <button mat-button [mat-dialog-close]="noteForm.value" [disabled]="noteForm.invalid">Save</button>
+    </mat-dialog-actions>
+</form>
